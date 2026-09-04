@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AgriGuard IoT User Acceptance Testing Survey">
+  <title>AgriGuard IoT | UAT Survey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="AgriGuard IoT survey home">
+      <span class="brand-mark" aria-hidden="true">AG</span>
+      <span><strong>AgriGuard</strong><small>IoT field study</small></span>
+    </a>
+    <span class="header-label">THESIS UAT / 2026</span>
+  </header>
+
+  <main class="page-shell">
+    <section class="intro-panel" aria-labelledby="page-title">
+      <div class="eyebrow">Solar-powered smart agriculture</div>
+      <h1 id="page-title">User Acceptance<br><em>Testing Survey</em></h1>
+      <p class="intro-copy">Help us understand how AgriGuard IoT fits into real farm work. Your experience with the smart scarecrow system and Android application will guide the next stage of this thesis project.</p>
+      <div class="intro-meta"><span>11 sections</span><span class="meta-dot"></span><span>About 5 minutes</span><span class="meta-dot"></span><span>Anonymous</span></div>
+    </section>
+
+    <section class="survey-card google-form-card" aria-label="AgriGuard IoT Google Form">
+      <iframe
+        class="google-form-frame"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScAPWp82dSAacd41DiFiVfJW7Qpu_B9o1uOZ2ex1V8EBNi6UQ/viewform?embedded=true"
+        title="AgriGuard IoT User Acceptance Testing Survey"
+        loading="lazy">
+        Loading Google Form...
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>AgriGuard IoT</span><span>Research participant survey</span><a href="admin.html">Research dashboard</a></footer>
+  <script>
+    const googleFormFrame = document.querySelector(".google-form-frame");
+    let hasLoadedGoogleForm = false;
+
+    googleFormFrame.addEventListener("load", () => {
+      if (hasLoadedGoogleForm) {
+        googleFormFrame.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      hasLoadedGoogleForm = true;
+    });
+  </script>
+</body>
+</html>
